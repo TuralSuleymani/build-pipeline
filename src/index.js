@@ -4,7 +4,7 @@ const app = require('./app');
 const { createConfig } = require('./config/config');
 
 async function execute() {
-    const configPath = path.join(__dirname, './configs/.env');
+    const configPath = path.join(__dirname, '../configs/.env');
     const appConfig = createConfig(configPath);
 
     await db.connect(appConfig);
