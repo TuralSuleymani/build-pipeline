@@ -9,16 +9,11 @@ const envVarsSchema = Joi.object()
     .unknown();
 
 function createConfig(configPath) {
-    // Load environment variables from the .env file first if they exist
     dotenv.config({ path: configPath });
 
-    // Now validate the environment variables, preferring those in process.env
     const { value: envVars, error } = envVarsSchema
         .prefs({ errors: { label: 'key' } })
-        .validate({
-            PORT: process.env.PORT || dotenv.config({ path: configPath }).parsed.PORT,
-            MONGODB_URL: process.env.MONGODB_URL || dotenv.config({ path: configPath }).parsed.MONGODB_URL
-        });
+        .validate(process.env);
 
     if (error) {
         throw new Error(`Config validation error: ${error.message}`);

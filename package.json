@@ -4,7 +4,7 @@
   "description": "simple account microservice with crud functionalities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,13 @@
     "express": "^4.19.2",
     "express-mongo-sanitize": "^2.2.0",
     "joi": "^17.12.3",
+    "kafkajs": "^2.2.4",
     "mongoose": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0",
+    "nodemon": "^3.1.0",
+    "sinon": "^18.0.0"
   }
 }
