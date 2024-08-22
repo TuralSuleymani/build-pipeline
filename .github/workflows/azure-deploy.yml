@@ -65,5 +65,5 @@ jobs:
 
     - name: Install dependencies on Azure Web App
       run: |
-        cd site/wwwroot
+        cd /site/wwwroot
         npm install
