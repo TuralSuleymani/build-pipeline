@@ -3,7 +3,7 @@ const Joi = require('joi');
 
 const envVarsSchema = Joi.object()
     .keys({
-        PORT: Joi.number().default(3000),
+        PORT: Joi.number().default(3001),
         MONGODB_URL: Joi.string().required().description('Mongo DB url')
     })
     .unknown();
