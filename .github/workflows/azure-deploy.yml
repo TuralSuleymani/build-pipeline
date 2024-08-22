@@ -46,6 +46,7 @@ jobs:
   deploy:
     name: Deploy to Azure Web App
     runs-on: ubuntu-latest
+    needs: test  # Run this job after testing succeeds
     steps:
     - name: Download build artifacts
       uses: actions/download-artifact@v3
