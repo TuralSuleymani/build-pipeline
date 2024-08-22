@@ -20,6 +20,7 @@ jobs:
       run: npm install
     - name: Run npm audit
       run: npm audit --audit-level=high
+      
   check-dependencies:
     name: Check Dependencies
     runs-on: ubuntu-latest
