@@ -65,5 +65,5 @@ jobs:
 
     - name: Install dependencies on Azure Web App
       run: |
-        cd /site/wwwroot
-        npm install
+        echo "Running npm install on Azure Web App..."
+        az webapp ssh --name account-microservice-webapp --resource-group account-resource-group --command "cd /home/site/wwwroot && npm install"
