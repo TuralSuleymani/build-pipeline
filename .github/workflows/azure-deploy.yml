@@ -62,8 +62,3 @@ jobs:
         app-name: 'account-microservice-webapp'  # Matches the "msdeploySite" in your publish profile
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Ensure this secret contains the publish profile XML content
         package: ./  # This deploys the entire repository; adjust if needed
-
-    - name: Install dependencies on Azure Web App
-      run: |
-        echo "Running npm install on Azure Web App..."
-        az webapp ssh --name account-microservice-webapp --resource-group account-resource-group --command "cd /home/site/wwwroot && npm install"
