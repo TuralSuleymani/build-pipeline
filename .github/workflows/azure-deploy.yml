@@ -61,4 +61,4 @@ jobs:
       with:
         app-name: 'account-microservice-webapp'  # Matches the "msdeploySite" in your publish profile
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # Ensure this secret contains the publish profile XML content
-        package: src/  # This deploys the entire repository; adjust if needed
+        package: ../../  # This deploys the entire repository; adjust if needed
