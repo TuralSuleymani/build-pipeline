@@ -4,6 +4,7 @@
   "description": "simple account microservice with crud functionalities",
   "main": "index.js",
   "scripts": {
+    "start":"node src/index.js",
     "test": "mocha",
     "lint": "eslint ."
   },
