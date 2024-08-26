@@ -12,8 +12,6 @@ const logger = winston.createLogger({
   ],
 });
 
-
-
 async function execute() {
     logger.info('preparing account service ...');
     const configPath = path.join(__dirname, '../configs/.env');
