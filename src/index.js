@@ -8,8 +8,9 @@ async function execute() {
     const appConfig = createConfig(configPath);
 
     await db.connect(appConfig);
-    const server = app.listen(appConfig.port, () => {
-        console.log('account service started', { port: appConfig.port });
+    const port = process.env.PORT || appConfig.port;
+    const server = app.listen(port, () => {
+        console.log('account service started', { port: port });
     });
 
     const closeServer = () => {
