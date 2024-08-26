@@ -61,7 +61,6 @@ jobs:
  
    - name: Clean up unnecessary files
      run: |
-       rm -rf node_modules
        rm -rf .git
        rm -rf .github
        rm -rf _actions
