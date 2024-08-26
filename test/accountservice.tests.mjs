@@ -15,7 +15,7 @@ describe('getAccountById service', () => {
         await findByIdStub.restore();
     });
 
-    it('should return the account if found by id', async () => {
+    it('should return the account if found by  id', async () => {
         const expectedAccountId = '12345';
         const expectedAccount = { name: 'Test Account', number: '123-456-7890' };
         findByIdStub.withArgs(expectedAccountId).resolves(expectedAccount);
